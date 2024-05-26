@@ -86,6 +86,7 @@ function createImage() {
 galleryList.innerHTML = createImage();
 
 galleryList.addEventListener("click", openModal);
+bacdrop.addEventListener("click", closeModa)
 
 function openModal(event) {
     const element = event.target;
@@ -97,3 +98,7 @@ function openModal(event) {
     bacdrop.id = "";
     modal.style.backgroundImage = `url('${element.src}')`
 };
+
+function closeModa() {
+    bacdrop.id = "is-hidden"
+}
